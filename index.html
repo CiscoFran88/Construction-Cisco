@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoria de Remodelação e Decoração</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #eaeaea;
+        }
+        .hero h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #666;
+        }
+        .services, .portfolio, .contact {
+            padding: 50px 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .lang-switch {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+        .lang-switch a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+    <script>
+        function switchLanguage(lang) {
+            const texts = {
+                pt: {
+                    heroTitle: 'Transforme sua Casa com Estilo',
+                    heroText: 'Oferecemos soluções personalizadas para cada projeto.',
+                    servicesTitle: 'Serviços',
+                    servicesText: 'Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.',
+                    portfolioTitle: 'Portfólio',
+                    portfolioText: 'Veja nossos projetos anteriores.',
+                    aboutTitle: 'Sobre Mim',
+                    aboutText: 'Experiência em remodelação e decoração de interiores.',
+                    contactTitle: 'Contato',
+                    contactText: 'Entre em contato para saber mais.'
+                },
+                en: {
+                    heroTitle: 'Transform Your Home with Style',
+                    heroText: 'We offer tailored solutions for every project.',
+                    servicesTitle: 'Services',
+                    servicesText: 'Project management, contractor selection, materials, and decoration.',
+                    portfolioTitle: 'Portfolio',
+                    portfolioText: 'Check out our previous projects.',
+                    aboutTitle: 'About Me',
+                    aboutText: 'Experience in remodeling and interior decoration.',
+                    contactTitle: 'Contact',
+                    contactText: 'Get in touch to learn more.'
+                }
+            };
+
+            document.querySelector('.hero h1').textContent = texts[lang].heroTitle;
+            document.querySelector('.hero p').textContent = texts[lang].heroText;
+            document.querySelector('#services h2').textContent = texts[lang].servicesTitle;
+            document.querySelector('#services p').textContent = texts[lang].servicesText;
+            document.querySelector('#portfolio h2').textContent = texts[lang].portfolioTitle;
+            document.querySelector('#portfolio p').textContent = texts[lang].portfolioText;
+            document.querySelector('#about h2').textContent = texts[lang].aboutTitle;
+            document.querySelector('#about p').textContent = texts[lang].aboutText;
+            document.querySelector('#contact h2').textContent = texts[lang].contactTitle;
+            document.querySelector('#contact p').textContent = texts[lang].contactText;
+        }
+    </script>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="#" onclick="switchLanguage('pt')">PT</a> | <a href="#" onclick="switchLanguage('en')">EN</a>
+    </div>
+    <header>
+        <h1>Consultoria de Obras e Decoração</h1>
+        <nav>
+            <a href="#services">Serviços</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#about">Sobre Mim</a>
+            <a href="#contact">Contato</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Transforme sua Casa com Estilo</h1>
+        <p>Oferecemos soluções personalizadas para cada projeto.</p>
+    </section>
+    <section id="services" class="services">
+        <h2>Serviços</h2>
+        <p>Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.</p>
+    </section>
+    <section id="portfolio" class="portfolio">
+        <h2>Portfólio</h2>
+        <p>Veja nossos projetos anteriores.</p>
+    </section>
+    <section id="about" class="about">
+        <h2>Sobre Mim</h2>
+        <p>Experiência em remodelação e decoração de interiores.</p>
+    </section>
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <p>Entre em contato para saber mais.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Consultoria de Obras e Decoração</p>
+    </footer>
+</body>
+</html>
