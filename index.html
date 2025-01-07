@@ -70,10 +70,51 @@
             font-size: 0.9em;
         }
     </style>
+    <script>
+        function switchLanguage(lang) {
+            const texts = {
+                pt: {
+                    heroTitle: 'Transforme sua Casa com Estilo',
+                    heroText: 'Oferecemos soluções personalizadas para cada projeto.',
+                    servicesTitle: 'Serviços',
+                    servicesText: 'Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.',
+                    portfolioTitle: 'Portfólio',
+                    portfolioText: 'Veja nossos projetos anteriores.',
+                    aboutTitle: 'Sobre Mim',
+                    aboutText: 'Experiência em remodelação e decoração de interiores.',
+                    contactTitle: 'Contato',
+                    contactText: 'Entre em contato para saber mais.'
+                },
+                en: {
+                    heroTitle: 'Transform Your Home with Style',
+                    heroText: 'We offer tailored solutions for every project.',
+                    servicesTitle: 'Services',
+                    servicesText: 'Project management, contractor selection, materials, and decoration.',
+                    portfolioTitle: 'Portfolio',
+                    portfolioText: 'Check out our previous projects.',
+                    aboutTitle: 'About Me',
+                    aboutText: 'Experience in remodeling and interior decoration.',
+                    contactTitle: 'Contact',
+                    contactText: 'Get in touch to learn more.'
+                }
+            };
+
+            document.querySelector('.hero h1').textContent = texts[lang].heroTitle;
+            document.querySelector('.hero p').textContent = texts[lang].heroText;
+            document.querySelector('#services h2').textContent = texts[lang].servicesTitle;
+            document.querySelector('#services p').textContent = texts[lang].servicesText;
+            document.querySelector('#portfolio h2').textContent = texts[lang].portfolioTitle;
+            document.querySelector('#portfolio p').textContent = texts[lang].portfolioText;
+            document.querySelector('#about h2').textContent = texts[lang].aboutTitle;
+            document.querySelector('#about p').textContent = texts[lang].aboutText;
+            document.querySelector('#contact h2').textContent = texts[lang].contactTitle;
+            document.querySelector('#contact p').textContent = texts[lang].contactText;
+        }
+    </script>
 </head>
 <body>
     <div class="lang-switch">
-        <a href="#">PT</a> | <a href="#">EN</a>
+        <a href="#" onclick="switchLanguage('pt')">PT</a> | <a href="#" onclick="switchLanguage('en')">EN</a>
     </div>
     <header>
         <h1>Consultoria de Obras e Decoração</h1>
