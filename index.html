@@ -99,16 +99,16 @@
                 }
             };
 
-            document.querySelector('.hero h1').textContent = texts[lang].heroTitle;
-            document.querySelector('.hero p').textContent = texts[lang].heroText;
-            document.querySelector('#services h2').textContent = texts[lang].servicesTitle;
-            document.querySelector('#services p').textContent = texts[lang].servicesText;
-            document.querySelector('#portfolio h2').textContent = texts[lang].portfolioTitle;
-            document.querySelector('#portfolio p').textContent = texts[lang].portfolioText;
-            document.querySelector('#about h2').textContent = texts[lang].aboutTitle;
-            document.querySelector('#about p').textContent = texts[lang].aboutText;
-            document.querySelector('#contact h2').textContent = texts[lang].contactTitle;
-            document.querySelector('#contact p').textContent = texts[lang].contactText;
+            document.getElementById('hero-title').textContent = texts[lang].heroTitle;
+            document.getElementById('hero-text').textContent = texts[lang].heroText;
+            document.getElementById('services-title').textContent = texts[lang].servicesTitle;
+            document.getElementById('services-text').textContent = texts[lang].servicesText;
+            document.getElementById('portfolio-title').textContent = texts[lang].portfolioTitle;
+            document.getElementById('portfolio-text').textContent = texts[lang].portfolioText;
+            document.getElementById('about-title').textContent = texts[lang].aboutTitle;
+            document.getElementById('about-text').textContent = texts[lang].aboutText;
+            document.getElementById('contact-title').textContent = texts[lang].contactTitle;
+            document.getElementById('contact-text').textContent = texts[lang].contactText;
         }
     </script>
 </head>
@@ -126,24 +126,24 @@
         </nav>
     </header>
     <section class="hero">
-        <h1>Transforme sua Casa com Estilo</h1>
-        <p>Oferecemos soluções personalizadas para cada projeto.</p>
+        <h1 id="hero-title">Transforme sua Casa com Estilo</h1>
+        <p id="hero-text">Oferecemos soluções personalizadas para cada projeto.</p>
     </section>
     <section id="services" class="services">
-        <h2>Serviços</h2>
-        <p>Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.</p>
+        <h2 id="services-title">Serviços</h2>
+        <p id="services-text">Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.</p>
     </section>
     <section id="portfolio" class="portfolio">
-        <h2>Portfólio</h2>
-        <p>Veja nossos projetos anteriores.</p>
+        <h2 id="portfolio-title">Portfólio</h2>
+        <p id="portfolio-text">Veja nossos projetos anteriores.</p>
     </section>
     <section id="about" class="about">
-        <h2>Sobre Mim</h2>
-        <p>Experiência em remodelação e decoração de interiores.</p>
+        <h2 id="about-title">Sobre Mim</h2>
+        <p id="about-text">Experiência em remodelação e decoração de interiores.</p>
     </section>
     <section id="contact" class="contact">
-        <h2>Contato</h2>
-        <p>Entre em contato para saber mais.</p>
+        <h2 id="contact-title">Contato</h2>
+        <p id="contact-text">Entre em contato para saber mais.</p>
     </section>
     <footer>
         <p>&copy; 2025 Consultoria de Obras e Decoração</p>
