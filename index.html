@@ -41,14 +41,6 @@
             font-size: 1.2em;
             color: #666;
         }
-        .services, .portfolio, .contact {
-            padding: 50px 20px;
-        }
-        h2 {
-            margin-bottom: 20px;
-            font-size: 2em;
-            text-align: center;
-        }
         footer {
             background-color: #333;
             color: #fff;
@@ -74,41 +66,29 @@
         function switchLanguage(lang) {
             const texts = {
                 pt: {
+                    menuServices: 'Serviços',
+                    menuPortfolio: 'Portfólio',
+                    menuAbout: 'Sobre Mim',
+                    menuContact: 'Contato',
                     heroTitle: 'Transforme sua Casa com Estilo',
-                    heroText: 'Oferecemos soluções personalizadas para cada projeto.',
-                    servicesTitle: 'Serviços',
-                    servicesText: 'Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.',
-                    portfolioTitle: 'Portfólio',
-                    portfolioText: 'Veja nossos projetos anteriores.',
-                    aboutTitle: 'Sobre Mim',
-                    aboutText: 'Experiência em remodelação e decoração de interiores.',
-                    contactTitle: 'Contato',
-                    contactText: 'Entre em contato para saber mais.'
+                    heroText: 'Oferecemos soluções personalizadas para cada projeto.'
                 },
                 en: {
+                    menuServices: 'Services',
+                    menuPortfolio: 'Portfolio',
+                    menuAbout: 'About Me',
+                    menuContact: 'Contact',
                     heroTitle: 'Transform Your Home with Style',
-                    heroText: 'We offer tailored solutions for every project.',
-                    servicesTitle: 'Services',
-                    servicesText: 'Project management, contractor selection, materials, and decoration.',
-                    portfolioTitle: 'Portfolio',
-                    portfolioText: 'Check out our previous projects.',
-                    aboutTitle: 'About Me',
-                    aboutText: 'Experience in remodeling and interior decoration.',
-                    contactTitle: 'Contact',
-                    contactText: 'Get in touch to learn more.'
+                    heroText: 'We offer tailored solutions for every project.'
                 }
             };
 
+            document.getElementById('menu-services').textContent = texts[lang].menuServices;
+            document.getElementById('menu-portfolio').textContent = texts[lang].menuPortfolio;
+            document.getElementById('menu-about').textContent = texts[lang].menuAbout;
+            document.getElementById('menu-contact').textContent = texts[lang].menuContact;
             document.getElementById('hero-title').textContent = texts[lang].heroTitle;
             document.getElementById('hero-text').textContent = texts[lang].heroText;
-            document.getElementById('services-title').textContent = texts[lang].servicesTitle;
-            document.getElementById('services-text').textContent = texts[lang].servicesText;
-            document.getElementById('portfolio-title').textContent = texts[lang].portfolioTitle;
-            document.getElementById('portfolio-text').textContent = texts[lang].portfolioText;
-            document.getElementById('about-title').textContent = texts[lang].aboutTitle;
-            document.getElementById('about-text').textContent = texts[lang].aboutText;
-            document.getElementById('contact-title').textContent = texts[lang].contactTitle;
-            document.getElementById('contact-text').textContent = texts[lang].contactText;
         }
     </script>
 </head>
@@ -119,31 +99,15 @@
     <header>
         <h1>Consultoria de Obras e Decoração</h1>
         <nav>
-            <a href="#services">Serviços</a>
-            <a href="#portfolio">Portfólio</a>
-            <a href="#about">Sobre Mim</a>
-            <a href="#contact">Contato</a>
+            <a href="services.html" id="menu-services">Serviços</a>
+            <a href="portfolio.html" id="menu-portfolio">Portfólio</a>
+            <a href="about.html" id="menu-about">Sobre Mim</a>
+            <a href="contact.html" id="menu-contact">Contato</a>
         </nav>
     </header>
     <section class="hero">
         <h1 id="hero-title">Transforme sua Casa com Estilo</h1>
         <p id="hero-text">Oferecemos soluções personalizadas para cada projeto.</p>
-    </section>
-    <section id="services" class="services">
-        <h2 id="services-title">Serviços</h2>
-        <p id="services-text">Acompanhamento de obra, escolha de empreiteiros, materiais e decoração.</p>
-    </section>
-    <section id="portfolio" class="portfolio">
-        <h2 id="portfolio-title">Portfólio</h2>
-        <p id="portfolio-text">Veja nossos projetos anteriores.</p>
-    </section>
-    <section id="about" class="about">
-        <h2 id="about-title">Sobre Mim</h2>
-        <p id="about-text">Experiência em remodelação e decoração de interiores.</p>
-    </section>
-    <section id="contact" class="contact">
-        <h2 id="contact-title">Contato</h2>
-        <p id="contact-text">Entre em contato para saber mais.</p>
     </section>
     <footer>
         <p>&copy; 2025 Consultoria de Obras e Decoração</p>
