@@ -5,32 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | sim.pler</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            background-color: #f3f3f3;
+            background-color: #f8f9fa;
             color: #333;
         }
         header {
             background-color: #ffffff;
             padding: 20px 40px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 2px solid #e0e0e0;
         }
         header h1 {
-            font-size: 1.5rem;
-            color: #333;
+            font-size: 2rem;
+            color: #2c2c2c;
             margin: 0;
+            font-weight: 600;
         }
         header h1 span {
             display: block;
             font-size: 1rem;
-            font-weight: 300;
-            color: #555;
+            font-weight: 400;
+            color: #777;
         }
         nav ul {
             list-style: none;
@@ -39,87 +39,75 @@
             display: flex;
         }
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             text-decoration: none;
             color: #555;
-            font-weight: 400;
+            font-weight: 500;
             transition: color 0.3s;
         }
         nav ul li a:hover {
-            color: #000;
-        }
-        .hero {
-            height: 80vh;
-            background: linear-gradient(to bottom right, #dcdcdc, #e6e6e6);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 20px;
-        }
-        .hero h2 {
-            font-size: 2.5rem;
             color: #333;
-            margin-bottom: 10px;
-        }
-        .hero p {
-            font-size: 1rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #999;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #555;
         }
         .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 40px;
+            margin-left: 20px;
         }
         .language-switch button {
-            background: none;
+            background: #e9ecef;
             border: 1px solid #ccc;
             padding: 5px 10px;
             font-size: 0.9rem;
             cursor: pointer;
-            transition: background 0.3s;
+            border-radius: 4px;
         }
-        .language-switch button:hover {
-            background: #ddd;
+        .hero {
+            height: 80vh;
+            background: linear-gradient(to bottom right, #f5f5f5, #e8e8e8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cta-button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #6c757d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .cta-button:hover {
+            background-color: #495057;
         }
         footer {
-            background-color: #ffffff;
-            padding: 10px 20px;
+            background-color: #f8f9fa;
+            padding: 15px 20px;
             text-align: center;
-            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+            border-top: 2px solid #e0e0e0;
         }
         footer p {
             font-size: 0.9rem;
-            color: #888;
+            color: #777;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>sim.pler<span>Project Management & Consulting</span></h1>
-        <div class="language-switch">
-            <button>EN</button>
-            <button>PT</button>
-        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -129,6 +117,10 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <div class="language-switch">
+            <button onclick="switchToEnglish()">EN</button>
+            <button onclick="switchToPortuguese()">PT</button>
+        </div>
     </header>
 
     <section class="hero">
@@ -142,5 +134,17 @@
     <footer>
         <p>&copy; 2025 sim.pler. All rights reserved.</p>
     </footer>
+
+    <script>
+        function switchToEnglish() {
+            document.querySelector('.hero h2').innerText = 'Crafting Your Vision, Building Your Dreams';
+            document.querySelector('.hero p').innerText = 'We specialize in delivering premium project management and consulting services tailored to your renovation and decoration needs.';
+        }
+
+        function switchToPortuguese() {
+            document.querySelector('.hero h2').innerText = 'Realizando sua Visão, Construindo seus Sonhos';
+            document.querySelector('.hero p').innerText = 'Somos especializados em oferecer serviços de gestão de projetos e consultoria premium para atender às suas necessidades de renovação e decoração.';
+        }
+    </script>
 </body>
 </html>
